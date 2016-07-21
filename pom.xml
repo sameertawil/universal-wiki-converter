@@ -30,6 +30,12 @@
 			<artifactId>javac2</artifactId>
 			<version>142.1</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.geronimo.bundles/axis -->
+		<dependency>
+			<groupId>org.apache.geronimo.bundles</groupId>
+			<artifactId>axis</artifactId>
+			<version>1.4_2</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/oro/oro -->
 		<dependency>
 			<groupId>oro</groupId>
@@ -48,8 +54,6 @@
 			<artifactId>axis-wsdl4j</artifactId>
 			<version>1.5.1</version>
 		</dependency>
-<<<<<<< HEAD
-=======
 		<dependency>
 			<groupId>javax.mail</groupId>
 			<artifactId>mail</artifactId>
@@ -81,6 +85,5 @@
 			<artifactId>axis-saaj</artifactId>
 			<version>1.4</version>
 		</dependency>
->>>>>>> sgiad/master
 	</dependencies>
 </project>
