@@ -186,8 +186,8 @@
 
     <target name="finish-dist">
         <copy todir="${uwc.output.dir}/lib">
-            <fileset dir="lib"/>
         </copy>
+            <fileset dir="lib"/>
         <copy todir="${uwc.output.dir}">
             <fileset dir="bin"/>
         </copy>
