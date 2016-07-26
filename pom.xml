@@ -161,6 +161,16 @@
 			<scope>system</scope>
 			<systemPath>C:\Program Files\Java\jdk1.7.0_51\lib\tools.jar</systemPath>
 		</dependency>
+		<dependency>
+			<groupId>org.jdom</groupId>
+			<artifactId>jdom</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.swinglabs</groupId>
+			<artifactId>swing-layout</artifactId>
+			<version>1.0.3</version>
+		</dependency>
 	</dependencies>
 	
 	<build>
