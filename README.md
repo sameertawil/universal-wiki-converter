@@ -29,7 +29,16 @@ mvn install:install-file -DgroupId=org.jvnet.substance \
                            -Dversion=2.3final \
                            -Dfile=lib/substance.jar \
                            -Dpackaging=jar
+mvn install:install-file -DgroupId=com.atlassian.confluence \
+                          -DartifactId=sharepoint-wrapper \
+						  -Dversion=1.0 \
+						  -Dfile=lib/sharepoint-wrapper-1.0.jar \
+						  -Dpackaging=jar
+```
 
+Don't forget to setup your environment variabls.
+```
+export JAVA_HOME=/c/Program\ Files/Java/jdk1.7.0_51
 ```
 
 ## More
