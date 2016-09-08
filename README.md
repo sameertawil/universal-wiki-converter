@@ -1,5 +1,26 @@
 # Universal Wiki Converter readme.txt file
 
+#
+#  Project History
+#
+This project is a fork of https://github.com/sameertawil/universal-wiki-converter
+which itself is a fork of https://github.com/AtlassianContribs/universal-wiki-converter
+which itself is a fork of https://bitbucket.org/appfusions/universal-wiki-converter
+
+
+AppFusions repo has 3 main flaws
+* no update starting from october 2015
+* read access only
+* pull requests never merged (see https://bitbucket.org/appfusions/universal-wiki-converter/pull-requests/)
+
+Quoting Sorin Sbarnea
+    As it seems that pull requests are ignored here, I invite you to try join
+    a real open-source and community driven fork at https://github.com/AtlassianContribs/universal-wiki-converter/wiki
+
+
+#
+# Build process
+#
 To build the UWC use ANT (http://ant.apache.org/):
 * cd devel (the devel dir.)
 * ant      (the default target will build the UWC under 
@@ -41,12 +62,14 @@ Don't forget to setup your environment variabls.
 export JAVA_HOME=/c/Program\ Files/Java/jdk1.7.0_51
 ```
 
-## More
-
+#
+# More
+#
 More details and documentation is here: https://migrations.atlassian.net/wiki/display/UWC/Universal+Wiki+Converter
 
+#
 # ABOUT THE UWC
-
+#
 This code is open source and is up to date with Atlassian's latest storage format of Atlassian Confluence
 (introduced in Confluence 4). We successfully use/run the UWC for Confluence 5.X releases, however, there are *many* flavors and versions of MIGRATE_FROM wikis. 
 
