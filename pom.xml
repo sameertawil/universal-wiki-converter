@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="??????" >
+<project>
     <!-- do I need a parent -->
 	<!-- is it the same for all pom.xml? -->
 	
@@ -177,10 +177,6 @@
 			<version>0.6.1</version>
 		</dependency>
 	</dependencies>
-<<<<<<< HEAD
-</project>
-=======
-	
 	<build>
 		<plugins>
 			<plugin>
@@ -194,4 +190,3 @@
 		</plugins>
 	</build>
 </project>
->>>>>>> d68211fd40f28ed24bcb96de3c6c6c9e50c4f2e8
