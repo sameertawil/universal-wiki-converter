@@ -1,22 +1,24 @@
 # Universal Wiki Converter readme.txt file
 
 #
-#  Project History
+#  Project forks history
 #
-This project is a fork of https://github.com/sameertawil/universal-wiki-converter
-which itself is a fork of https://github.com/AtlassianContribs/universal-wiki-converter
-which itself is a fork of https://bitbucket.org/appfusions/universal-wiki-converter
+> START POINT : migration from SVN to GIT
+        URL : https://bitbucket.org/appfusions/universal-wiki-converter
+        
+>> AppFusions repo was forked by Sorin Sbarnea
+        URL : https://github.com/AtlassianContribs/universal-wiki-converter
+        Motivation : As it seems that pull requests are ignored here, I invite you to try join
+                     a real open-source and community driven fork
+                     at https://github.com/AtlassianContribs/universal-wiki-converter/wiki
 
+>>> Sorin Sbarnea was repo forked by sameertawil
+        URL : https://github.com/sameertawil/universal-wiki-converter
+        Motivation : ...
 
-AppFusions repo has 3 main flaws
-* no update starting from october 2015
-* read access only
-* pull requests never merged (see https://bitbucket.org/appfusions/universal-wiki-converter/pull-requests/)
-
-Quoting Sorin Sbarnea
-    As it seems that pull requests are ignored here, I invite you to try join
-    a real open-source and community driven fork at https://github.com/AtlassianContribs/universal-wiki-converter/wiki
-
+>>>> sameertawil was repo forked by Mathieu Saade
+        URL : https://github.com/sameertawil/universal-wiki-converter
+        Motivation : work specifically on xwiki syntax 2.0, and maybe other general improvments
 
 #
 # Build process
