@@ -12,11 +12,11 @@
                      a real open-source and community driven fork
                      at https://github.com/AtlassianContribs/universal-wiki-converter/wiki
 
->>> Sorin Sbarnea was repo forked by sameertawil
+>>> Sorin Sbarnea repo was forked by sameertawil
         URL : https://github.com/sameertawil/universal-wiki-converter
         Motivation : ...
 
->>>> sameertawil was repo forked by Mathieu Saade
+>>>> sameertawil repo was forked by Mathieu Saade
         URL : https://github.com/sameertawil/universal-wiki-converter
         Motivation : work specifically on xwiki syntax 2.0, and maybe other general improvments
 
