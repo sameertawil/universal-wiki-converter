@@ -5,7 +5,7 @@
 
     <groupId>com.atlassian.uwc</groupId>
     <artifactId>uwc</artifactId>
-    <version>3.13.0</version>
+    <version>4.0.0</version>
 
 	<properties>
 		<file>uwc.properties</file>
