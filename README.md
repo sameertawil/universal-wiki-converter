@@ -1,5 +1,39 @@
-# Universal Wiki Converter readme.txt file
+# Universal Wiki Converter Readme
 
+
+##  Project forks history
+1. START POINT : migration from SVN to GIT
+  * URL : https://bitbucket.org/appfusions/universal-wiki-converter
+        
+2. AppFusions repo was forked by Sorin Sbarnea
+  * URL : https://github.com/AtlassianContribs/universal-wiki-converter
+  * Motivation : As it seems that pull requests are ignored here, I invite you to try join a real open-source and community driven fork at https://github.com/AtlassianContribs/universal-wiki-converter/wiki
+
+3. Sorin Sbarnea repo was forked by sameertawil
+  * URL : https://github.com/sameertawil/universal-wiki-converter
+  * Motivation : ...
+
+4. sameertawil repo was forked by Mathieu Saade
+  * URL : https://github.com/sameertawil/universal-wiki-converter
+  * Motivation : work specifically on xwiki syntax 2.0, and maybe other general improvments
+
+
+## Possible improvments (no particular order)
+
+* remove Ant files
+* apply Maven rules by moving tests to src/test/java
+* modularize project in modules, 3 solutions:
+  * core + exporters/converters
+  * core + 1 module per wiki engine (19)
+  * core + 1 module per maintained wiki engine (xwiki) + 1 module for other wiki engines 
+* fix bugs and code smells
+  * Eclipse warnings (see quality_eclipse_warnings.txt)
+  * Sonar analysis (see quality_sonar_analysis.txt)
+
+
+## Build process
+
+### Ant
 To build the UWC use ANT (http://ant.apache.org/):
 * cd devel (the devel dir.)
 * ant      (the default target will build the UWC under 
@@ -11,7 +45,7 @@ To run the newly built UWC
 * chmod a+x *sh
 * ./run_uwc_devel.sh
 
-## using Maven
+### Maven
 
 ```shell
 mvn install:install-file -DgroupId=com.atlassian.confluence \
@@ -41,12 +75,44 @@ Don't forget to setup your environment variabls.
 export JAVA_HOME=/c/Program\ Files/Java/jdk1.7.0_51
 ```
 
-## More
+## Sonar analysis 
+See http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner+for+Maven
 
+1. Go to https://sonarqube.com/ and 
+  * Sign in with your GitHub account
+  * Generate a user token and keep the value in a private file
+
+2. Add the following pluginGroup & profile to the Maven settings.xml file, either the one located in $MAVEN_HOME/conf or ~/.m2
+```xml
+    <pluginGroups>
+        <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
+    </pluginGroups>
+    <profiles>
+        <profile>
+            <id>sonarqube</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <sonar.host.url>https://sonarqube.com</sonar.host.url>
+            </properties>
+        </profile>
+    </profiles>
+```
+
+3. Run a Sonar analysis (replace the value of $SONAR_TOKEN)
+```shell
+mvn -Psonarqube -Dsonar.login=$SONAR_TOKEN clean verify sonar:sonar
+```
+
+4. Enjoy the result
+
+
+## More
 More details and documentation is here: https://migrations.atlassian.net/wiki/display/UWC/Universal+Wiki+Converter
 
-# ABOUT THE UWC
 
+## ABOUT THE UWC
 This code is open source and is up to date with Atlassian's latest storage format of Atlassian Confluence
 (introduced in Confluence 4). We successfully use/run the UWC for Confluence 5.X releases, however, there are *many* flavors and versions of MIGRATE_FROM wikis. 
 

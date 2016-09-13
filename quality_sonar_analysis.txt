@@ -1,0 +1,23 @@
+URL : https://github.com/mathieusaade/universal-wiki-converter
+
+Tag : 4.0.0
+
+Analysis date : 13/09/2016 15:03
+
+Sonar version : 6.0
+
+Quality profile : Sonar way (version 26/08/2016, 272 rules, https://sonarqube.com/profiles/show?key=java-sonar-way-45126)
+
+Result : https://sonarqube.com/component_measures/?id=com.atlassian.uwc%3Auwc
+
+Summary
+* Type
+** 2826 bugs
+**  513 vulnerabilities
+** 8590 code smells 
+* Severity
+**  241 Blocker
+** 1574 Critical
+** 4487 Major
+** 5602 Minor
+**   52 Info 

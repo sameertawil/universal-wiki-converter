@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="??????" >
-    <!-- do I need a parent -->
-	<!-- is it the same for all pom.xml? -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	
 	<modelVersion>4.0.0</modelVersion>
 
     <groupId>com.atlassian.uwc</groupId>
     <artifactId>uwc</artifactId>
-    <version>3.13.0</version>
+    <version>4.0.0</version>
 
 	<properties>
 		<file>uwc.properties</file>
 		<environment>env</environment>
+        
+        <!-- ======================================================================================================= -->
+        <!-- Plugins config : to avoid having to configure each plugin in the build section                          -->
+        <!--                  use shortcuts "User Property"                                                          -->
+        <!-- ======================================================================================================= -->
+
+        <!-- compile : see http://maven.apache.org/plugins/maven-compiler-plugin/compile-mojo.html -->
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+        
+        <!-- compile / resources -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        
+        <!-- site -->
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<!-- compiler.debug>on</compiler.debug -->
-		<!-- value>-J-Dorg.xml.sax.driver=org.apache.xerces.parsers.SAXParser</value -->
-		<!-- name>gen-axis-code-marker-file<name> value="${gen-source-dir}/.axis-generated"/ -->
 	</properties>
 	
 	<dependencies>
@@ -159,7 +167,7 @@
 			<artifactId>tools</artifactId>
 			<version>1.6</version>
 			<scope>system</scope>
-			<systemPath>C:\Program Files\Java\jdk1.7.0_51\lib\tools.jar</systemPath>
+			<systemPath>${env.JAVA_HOME}/lib/tools.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>org.jdom</groupId>
@@ -177,21 +185,18 @@
 			<version>0.6.1</version>
 		</dependency>
 	</dependencies>
-<<<<<<< HEAD
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <!-- See http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner+for+Maven -->
+                    <!-- See README.md -->
+                    <groupId>org.sonarsource.scanner.maven</groupId>
+                    <artifactId>sonar-maven-plugin</artifactId>
+                    <version>3.1.1</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>
-=======
-	
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-</project>
->>>>>>> d68211fd40f28ed24bcb96de3c6c6c9e50c4f2e8
