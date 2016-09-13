@@ -23,12 +23,12 @@
 * remove Ant files
 * apply Maven rules by moving tests to src/test/java
 * modularize project in modules, 3 solutions:
-** core + exporters/converters
-** core + 1 module per wiki engine (19)
-** core + 1 module per maintained wiki engine (xwiki) + 1 module for other wiki engines 
+  * core + exporters/converters
+  * core + 1 module per wiki engine (19)
+  * core + 1 module per maintained wiki engine (xwiki) + 1 module for other wiki engines 
 * fix bugs and code smells
-** Eclipse warnings (see quality_eclipse_warnings.txt)
-** Sonar analysis (see quality_sonar_analysis.txt)
+  * Eclipse warnings (see quality_eclipse_warnings.txt)
+  * Sonar analysis (see quality_sonar_analysis.txt)
 
 
 ## Build process
