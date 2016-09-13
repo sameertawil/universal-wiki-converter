@@ -4,21 +4,21 @@
 #  Project forks history
 #
 > START POINT : migration from SVN to GIT
-        URL : https://bitbucket.org/appfusions/universal-wiki-converter
+> URL : https://bitbucket.org/appfusions/universal-wiki-converter
         
 >> AppFusions repo was forked by Sorin Sbarnea
-        URL : https://github.com/AtlassianContribs/universal-wiki-converter
-        Motivation : As it seems that pull requests are ignored here, I invite you to try join
-                     a real open-source and community driven fork
-                     at https://github.com/AtlassianContribs/universal-wiki-converter/wiki
+>>    URL : https://github.com/AtlassianContribs/universal-wiki-converter
+>>    Motivation : As it seems that pull requests are ignored here, I invite you to try join
+>>                 a real open-source and community driven fork
+>>                 at https://github.com/AtlassianContribs/universal-wiki-converter/wiki
 
 >>> Sorin Sbarnea repo was forked by sameertawil
-        URL : https://github.com/sameertawil/universal-wiki-converter
-        Motivation : ...
+>>>    URL : https://github.com/sameertawil/universal-wiki-converter
+>>>    Motivation : ...
 
 >>>> sameertawil repo was forked by Mathieu Saade
-        URL : https://github.com/sameertawil/universal-wiki-converter
-        Motivation : work specifically on xwiki syntax 2.0, and maybe other general improvments
+>>>>    URL : https://github.com/sameertawil/universal-wiki-converter
+>>>>    Motivation : work specifically on xwiki syntax 2.0, and maybe other general improvments
 
 #
 # Build process
@@ -65,15 +65,16 @@ export JAVA_HOME=/c/Program\ Files/Java/jdk1.7.0_51
 ```
 
 #
-# Sonar analysis
-# See http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner+for+Maven
+# Sonar analysis 
 #
-1. Go to https://sonarqube.com/ and 
-    Sign in with your GitHub account
-    Generate a user token and keep the value in a private file
+See http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner+for+Maven
 
-2. Add the following pluginGroup & profile to the Maven settings.xml file,
-   either the one located in $MAVEN_HOME/conf or ~/.m2
+1. Go to https://sonarqube.com/ and 
+  * Sign in with your GitHub account
+  * Generate a user token and keep the value in a private file
+
+2. Add the following pluginGroup & profile to the Maven settings.xml file, either the one located in $MAVEN_HOME/conf or ~/.m2
+```xml
     <pluginGroups>
         <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
     </pluginGroups>
@@ -88,9 +89,12 @@ export JAVA_HOME=/c/Program\ Files/Java/jdk1.7.0_51
             </properties>
         </profile>
     </profiles>
+```
 
 3. Run a Sonar analysis (replace the value of $SONAR_TOKEN)
-    mvn -Psonarqube -Dsonar.login=$SONAR_TOKEN clean verify sonar:sonar
+```
+mvn -Psonarqube -Dsonar.login=$SONAR_TOKEN clean verify sonar:sonar
+```
 
 4. Enjoy the result
 
