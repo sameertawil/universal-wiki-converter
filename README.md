@@ -65,6 +65,38 @@ export JAVA_HOME=/c/Program\ Files/Java/jdk1.7.0_51
 ```
 
 #
+# Sonar analysis
+# See http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner+for+Maven
+#
+1. Go to https://sonarqube.com/ and 
+    Sign in with your GitHub account
+    Generate a user token and keep the value in a private file
+
+2. Add the following pluginGroup & profile to the Maven settings.xml file,
+   either the one located in $MAVEN_HOME/conf or ~/.m2
+    <pluginGroups>
+        <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
+    </pluginGroups>
+    <profiles>
+        <profile>
+            <id>sonarqube</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <sonar.host.url>https://sonarqube.com</sonar.host.url>
+            </properties>
+        </profile>
+    </profiles>
+
+3. Run a Sonar analysis (replace the value of $SONAR_TOKEN)
+    mvn -Psonarqube -Dsonar.login=$SONAR_TOKEN clean verify sonar:sonar
+
+4. Enjoy the result
+
+
+#
+#
 # More
 #
 More details and documentation is here: https://migrations.atlassian.net/wiki/display/UWC/Universal+Wiki+Converter
